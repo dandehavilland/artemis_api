@@ -104,6 +104,8 @@ module ArtemisApi
       obj
     end
 
+    private
+
     def process_array(response, type, records)
       json = JSON.parse(response.body)
       json['data'].each do |obj|
