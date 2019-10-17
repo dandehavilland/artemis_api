@@ -94,8 +94,6 @@ module ArtemisApi
       ArtemisApi::User.get_current(client: self, include: include)
     end
 
-    private
-
     def process_response(response, type)
       json = JSON.parse(response.body)
       obj = store_record(type, json['data']['id'].to_i, json['data'])
